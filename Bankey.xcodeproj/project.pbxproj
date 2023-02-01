@@ -14,9 +14,6 @@
 		E3F4FDCE2988541100E201A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F4FDCC2988541100E201A2 /* LaunchScreen.storyboard */; };
 		E3F4FDD82988563E00E201A2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4FDD72988563E00E201A2 /* LoginView.swift */; };
 		E3F4FDDB2989A86900E201A2 /* OnboardingContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4FDDA2989A86900E201A2 /* OnboardingContainerVC.swift */; };
-		E3F4FDE02989B0AC00E201A2 /* Page1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4FDDF2989B0AC00E201A2 /* Page1VC.swift */; };
-		E3F4FDE22989B0EB00E201A2 /* Page2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4FDE12989B0EB00E201A2 /* Page2VC.swift */; };
-		E3F4FDE42989B0F800E201A2 /* Page3VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4FDE32989B0F800E201A2 /* Page3VC.swift */; };
 		E3F4FDE6298AA1C300E201A2 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4FDE5298AA1C300E201A2 /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,9 +27,6 @@
 		E3F4FDCF2988541100E201A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3F4FDD72988563E00E201A2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E3F4FDDA2989A86900E201A2 /* OnboardingContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerVC.swift; sourceTree = "<group>"; };
-		E3F4FDDF2989B0AC00E201A2 /* Page1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page1VC.swift; sourceTree = "<group>"; };
-		E3F4FDE12989B0EB00E201A2 /* Page2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page2VC.swift; sourceTree = "<group>"; };
-		E3F4FDE32989B0F800E201A2 /* Page3VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page3VC.swift; sourceTree = "<group>"; };
 		E3F4FDE5298AA1C300E201A2 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,37 +91,10 @@
 		E3F4FDD92989A7B300E201A2 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				E3F4FDDC2989AE3400E201A2 /* Page1 */,
-				E3F4FDDD2989AE4600E201A2 /* Page2 */,
-				E3F4FDDE2989AE4B00E201A2 /* Page3 */,
 				E3F4FDE5298AA1C300E201A2 /* OnboardingViewController.swift */,
 				E3F4FDDA2989A86900E201A2 /* OnboardingContainerVC.swift */,
 			);
 			name = Onboarding;
-			sourceTree = "<group>";
-		};
-		E3F4FDDC2989AE3400E201A2 /* Page1 */ = {
-			isa = PBXGroup;
-			children = (
-				E3F4FDDF2989B0AC00E201A2 /* Page1VC.swift */,
-			);
-			name = Page1;
-			sourceTree = "<group>";
-		};
-		E3F4FDDD2989AE4600E201A2 /* Page2 */ = {
-			isa = PBXGroup;
-			children = (
-				E3F4FDE12989B0EB00E201A2 /* Page2VC.swift */,
-			);
-			name = Page2;
-			sourceTree = "<group>";
-		};
-		E3F4FDDE2989AE4B00E201A2 /* Page3 */ = {
-			isa = PBXGroup;
-			children = (
-				E3F4FDE32989B0F800E201A2 /* Page3VC.swift */,
-			);
-			name = Page3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,12 +168,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3F4FDDB2989A86900E201A2 /* OnboardingContainerVC.swift in Sources */,
-				E3F4FDE42989B0F800E201A2 /* Page3VC.swift in Sources */,
 				E3F4FDC62988540F00E201A2 /* LoginViewController.swift in Sources */,
 				E3F4FDC22988540F00E201A2 /* AppDelegate.swift in Sources */,
-				E3F4FDE02989B0AC00E201A2 /* Page1VC.swift in Sources */,
 				E3F4FDD82988563E00E201A2 /* LoginView.swift in Sources */,
-				E3F4FDE22989B0EB00E201A2 /* Page2VC.swift in Sources */,
 				E3F4FDE6298AA1C300E201A2 /* OnboardingViewController.swift in Sources */,
 				E3F4FDC42988540F00E201A2 /* SceneDelegate.swift in Sources */,
 			);

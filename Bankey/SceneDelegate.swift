@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         self.window?.makeKeyAndVisible()
         window?.backgroundColor = .systemBackground
-        window?.rootViewController = OnboardingViewController()
+        window?.rootViewController = OnboardingContainerVC()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
