@@ -15,6 +15,9 @@
 		E3F4FDD82988563E00E201A2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4FDD72988563E00E201A2 /* LoginView.swift */; };
 		E3F4FDDB2989A86900E201A2 /* OnboardingContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4FDDA2989A86900E201A2 /* OnboardingContainerVC.swift */; };
 		E3F4FDE6298AA1C300E201A2 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4FDE5298AA1C300E201A2 /* OnboardingViewController.swift */; };
+		E3F4FDE9298AD38800E201A2 /* ViewControllerPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4FDE8298AD38800E201A2 /* ViewControllerPreview.swift */; };
+		E3F4FDEB298B197200E201A2 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4FDEA298B197200E201A2 /* DummyViewController.swift */; };
+		E3F4FDED298B263800E201A2 /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4FDEC298B263800E201A2 /* LocalState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		E3F4FDD72988563E00E201A2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E3F4FDDA2989A86900E201A2 /* OnboardingContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerVC.swift; sourceTree = "<group>"; };
 		E3F4FDE5298AA1C300E201A2 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		E3F4FDE8298AD38800E201A2 /* ViewControllerPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPreview.swift; sourceTree = "<group>"; };
+		E3F4FDEA298B197200E201A2 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
+		E3F4FDEC298B263800E201A2 /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +66,13 @@
 		E3F4FDC02988540F00E201A2 /* Bankey */ = {
 			isa = PBXGroup;
 			children = (
+				E3F4FDE7298AD37300E201A2 /* Utils */,
 				E3F4FDD92989A7B300E201A2 /* Onboarding */,
 				E3F4FDD62988561900E201A2 /* Login */,
 				E3F4FDD52988560500E201A2 /* Files */,
 				E3F4FDC12988540F00E201A2 /* AppDelegate.swift */,
 				E3F4FDC32988540F00E201A2 /* SceneDelegate.swift */,
+				E3F4FDEA298B197200E201A2 /* DummyViewController.swift */,
 			);
 			path = Bankey;
 			sourceTree = "<group>";
@@ -95,6 +103,15 @@
 				E3F4FDDA2989A86900E201A2 /* OnboardingContainerVC.swift */,
 			);
 			name = Onboarding;
+			sourceTree = "<group>";
+		};
+		E3F4FDE7298AD37300E201A2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E3F4FDE8298AD38800E201A2 /* ViewControllerPreview.swift */,
+				E3F4FDEC298B263800E201A2 /* LocalState.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,12 +184,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3F4FDE9298AD38800E201A2 /* ViewControllerPreview.swift in Sources */,
+				E3F4FDED298B263800E201A2 /* LocalState.swift in Sources */,
 				E3F4FDDB2989A86900E201A2 /* OnboardingContainerVC.swift in Sources */,
 				E3F4FDC62988540F00E201A2 /* LoginViewController.swift in Sources */,
 				E3F4FDC22988540F00E201A2 /* AppDelegate.swift in Sources */,
 				E3F4FDD82988563E00E201A2 /* LoginView.swift in Sources */,
 				E3F4FDE6298AA1C300E201A2 /* OnboardingViewController.swift in Sources */,
 				E3F4FDC42988540F00E201A2 /* SceneDelegate.swift in Sources */,
+				E3F4FDEB298B197200E201A2 /* DummyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

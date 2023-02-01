@@ -10,8 +10,11 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
-
+    
+    let loginViewController = LoginViewController()
+    let onboardingContainerVC = OnboardingContainerVC()
+    let dummyViewController = DummyViewController()
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
@@ -20,7 +23,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         self.window?.makeKeyAndVisible()
         window?.backgroundColor = .systemBackground
-        window?.rootViewController = OnboardingContainerVC()
+        
+        loginViewController.delegate = self
+        onboardingContainerVC.delegate = self
+        dummyViewController.logoutDelegate = self
+        
+        window?.rootViewController = loginViewController
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -54,3 +62,41 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+extension SceneDelegate: LoginViewControllerDelegate {
+    func didLogin() {
+        if LocalState.hasOnboarded {
+            setRootViewController(dummyViewController)
+        } else {
+            setRootViewController(onboardingContainerVC)
+        }
+    }
+    
+}
+
+extension SceneDelegate: OnboardingContainerVCDelegate {
+    func didFinishOnboarding() {
+        LocalState.hasOnboarded = true
+        setRootViewController(dummyViewController)
+    }
+    
+}
+
+extension SceneDelegate: LogoutDelegate {
+    func didLogout() {
+        setRootViewController(loginViewController)
+    }
+}
+
+extension SceneDelegate {
+    func setRootViewController(_ vc: UIViewController, animated: Bool = true) {
+        guard animated, let window = self.window else {
+            self.window?.rootViewController = vc
+            self.window?.makeKeyAndVisible()
+            return
+        }
+        
+        window.rootViewController = vc
+        window.makeKeyAndVisible()
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: nil)
+    }
+}

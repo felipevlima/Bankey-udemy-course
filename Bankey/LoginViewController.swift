@@ -7,6 +7,14 @@
 
 import UIKit
 
+protocol LogoutDelegate: AnyObject {
+    func didLogout()
+}
+
+protocol LoginViewControllerDelegate: AnyObject {
+    func didLogin()
+}
+
 class LoginViewController: UIViewController {
     let titleLabel: UILabel = {
         var label = UILabel()
@@ -37,6 +45,8 @@ class LoginViewController: UIViewController {
         return label
     }()
     
+    weak var delegate: LoginViewControllerDelegate?
+    
     var username: String? {
         return loginView.usernameTextField.text
     }
@@ -50,6 +60,11 @@ class LoginViewController: UIViewController {
         
         style()
         layout()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        signInButton.configuration?.showsActivityIndicator = false
     }
 }
 
@@ -99,14 +114,15 @@ extension LoginViewController {
             assertionFailure("Username / password should never be nil")
             return
         }
+//
+//        if username.isEmpty || password.isEmpty {
+//            configureView(withMessage: "Username / password cannot be blank")
+//            return
+//        }
         
-        if username.isEmpty || password.isEmpty {
-            configureView(withMessage: "Username / password cannot be blank")
-            return
-        }
-        
-        if username == "Felipe" && password == "123" {
+        if username == "" && password == "" {
             signInButton.configuration?.showsActivityIndicator = true
+            delegate?.didLogin()
         } else  {
             configureView(withMessage: "Incorrect username / password")
         }
