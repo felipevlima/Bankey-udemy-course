@@ -22,6 +22,7 @@
 		E3F4FDF1298B520D00E201A2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4FDF0298B520D00E201A2 /* MainViewController.swift */; };
 		E3F4FDF4298B56CF00E201A2 /* AccountSummaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4FDF3298B56CF00E201A2 /* AccountSummaryVC.swift */; };
 		E3F4FDF6298B596E00E201A2 /* AccountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4FDF5298B596E00E201A2 /* AccountSummaryHeaderView.swift */; };
+		E3F4FDFC298BE59B00E201A2 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4FDFB298BE59B00E201A2 /* AccountSummaryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		E3F4FDF0298B520D00E201A2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E3F4FDF3298B56CF00E201A2 /* AccountSummaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryVC.swift; sourceTree = "<group>"; };
 		E3F4FDF5298B596E00E201A2 /* AccountSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderView.swift; sourceTree = "<group>"; };
+		E3F4FDFB298BE59B00E201A2 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,10 +130,27 @@
 		E3F4FDF2298B56B300E201A2 /* AccountSummary */ = {
 			isa = PBXGroup;
 			children = (
+				E3F4FDFA298BE57000E201A2 /* Cells */,
+				E3F4FDF9298BE56A00E201A2 /* Header */,
 				E3F4FDF3298B56CF00E201A2 /* AccountSummaryVC.swift */,
-				E3F4FDF5298B596E00E201A2 /* AccountSummaryHeaderView.swift */,
 			);
 			name = AccountSummary;
+			sourceTree = "<group>";
+		};
+		E3F4FDF9298BE56A00E201A2 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				E3F4FDF5298B596E00E201A2 /* AccountSummaryHeaderView.swift */,
+			);
+			name = Header;
+			sourceTree = "<group>";
+		};
+		E3F4FDFA298BE57000E201A2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E3F4FDFB298BE59B00E201A2 /* AccountSummaryCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3F4FDFC298BE59B00E201A2 /* AccountSummaryCell.swift in Sources */,
 				E3F4FDF6298B596E00E201A2 /* AccountSummaryHeaderView.swift in Sources */,
 				E3F4FDE9298AD38800E201A2 /* ViewControllerPreview.swift in Sources */,
 				E3F4FDF1298B520D00E201A2 /* MainViewController.swift in Sources */,
