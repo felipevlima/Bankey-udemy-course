@@ -29,17 +29,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         loginViewController.delegate = self
         onboardingContainerVC.delegate = self
         
-        let vc = mainViewController
-        vc.setStatusBar()
-        
-        UINavigationBar.appearance().isTranslucent = false
-        UINavigationBar.appearance().backgroundColor = appColor
-        
-        window?.rootViewController = vc
-        
-        mainViewController.selectedIndex = 0
+        displayLogin()
     }
 
+
+    
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
@@ -72,12 +66,32 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 }
 
 extension SceneDelegate: LoginViewControllerDelegate {
-    func didLogin() {
+    func displayNextScreen() {
         if LocalState.hasOnboarded {
+            prepMainView()
             setRootViewController(mainViewController)
         } else {
             setRootViewController(onboardingContainerVC)
         }
+    }
+    
+    func didLogin() {
+        displayNextScreen()
+    }
+    
+    func prepMainView() {
+        mainViewController.setStatusBar()
+        
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().backgroundColor = appColor
+        
+//        window?.rootViewController = vc
+//
+//        mainViewController.selectedIndex = 0
+    }
+    
+    private func displayLogin() {
+        setRootViewController(loginViewController)
     }
     
 }
@@ -85,6 +99,7 @@ extension SceneDelegate: LoginViewControllerDelegate {
 extension SceneDelegate: OnboardingContainerVCDelegate {
     func didFinishOnboarding() {
         LocalState.hasOnboarded = true
+        prepMainView()
         setRootViewController(mainViewController)
     }
     
