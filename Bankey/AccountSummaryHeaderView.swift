@@ -8,6 +8,8 @@
 import UIKit
 
 class AccountSummaryHeaderView: UIView {
+    let shakeBellView = ShakeyBellView()
+    
     let stackView: UIStackView = {
         let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
@@ -17,8 +19,6 @@ class AccountSummaryHeaderView: UIView {
         stack.spacing = 8
         return stack
     }()
-    
-    
     
     let contentView = UIView()
     let imageView: UIImageView = {
@@ -64,6 +64,16 @@ class AccountSummaryHeaderView: UIView {
         return label
     }()
     
+    struct ViewModel {
+        let welcomeMessage: String
+        let name: String
+        let date: Date
+        
+        var dateFormatted: String {
+            return date.monthDayYearString
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -106,5 +116,22 @@ class AccountSummaryHeaderView: UIView {
             stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
             stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16)
         ])
+        
+        setupShakeBell()
+    }
+    
+    private func setupShakeBell() {
+        shakeBellView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(shakeBellView)
+        NSLayoutConstraint.activate([
+            shakeBellView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            shakeBellView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
+    }
+    
+    func configure(viewModel: ViewModel) {
+        greetingsLabel.text = viewModel.welcomeMessage
+        nameLabel.text = viewModel.name
+        dateLabel.text = viewModel.dateFormatted
     }
 }
