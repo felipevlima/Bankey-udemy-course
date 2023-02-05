@@ -29,6 +29,11 @@
 		E3F4FE30298C2A2B00E201A2 /* UITextField+SecureToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4FE2F298C2A2B00E201A2 /* UITextField+SecureToggle.swift */; };
 		E3F4FE33298CA4CD00E201A2 /* ShakeyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4FE32298CA4CD00E201A2 /* ShakeyBellView.swift */; };
 		E3F4FE35298CABB000E201A2 /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4FE34298CABB000E201A2 /* Date+Utils.swift */; };
+		E3F4FE3B29905C7F00E201A2 /* AccountSummaryVC+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4FE3A29905C7F00E201A2 /* AccountSummaryVC+Network.swift */; };
+		E3F4FE3D2990609800E201A2 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4FE3C2990609700E201A2 /* AccountTests.swift */; };
+		E3F4FE3F2990633400E201A2 /* SkeletonLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4FE3E2990633400E201A2 /* SkeletonLoadable.swift */; };
+		E3F4FE412990636B00E201A2 /* SkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4FE402990636B00E201A2 /* SkeletonCell.swift */; };
+		E3F4FE44299067CF00E201A2 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4FE43299067CF00E201A2 /* ProfileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,11 @@
 		E3F4FE2F298C2A2B00E201A2 /* UITextField+SecureToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SecureToggle.swift"; sourceTree = "<group>"; };
 		E3F4FE32298CA4CD00E201A2 /* ShakeyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBellView.swift; sourceTree = "<group>"; };
 		E3F4FE34298CABB000E201A2 /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
+		E3F4FE3A29905C7F00E201A2 /* AccountSummaryVC+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryVC+Network.swift"; sourceTree = "<group>"; };
+		E3F4FE3C2990609700E201A2 /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
+		E3F4FE3E2990633400E201A2 /* SkeletonLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadable.swift; sourceTree = "<group>"; };
+		E3F4FE402990636B00E201A2 /* SkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCell.swift; sourceTree = "<group>"; };
+		E3F4FE43299067CF00E201A2 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,9 +177,11 @@
 		E3F4FDF2298B56B300E201A2 /* AccountSummary */ = {
 			isa = PBXGroup;
 			children = (
+				E3F4FE42299067C200E201A2 /* Networking */,
 				E3F4FDFA298BE57000E201A2 /* Cells */,
 				E3F4FDF9298BE56A00E201A2 /* Header */,
 				E3F4FDF3298B56CF00E201A2 /* AccountSummaryVC.swift */,
+				E3F4FE3A29905C7F00E201A2 /* AccountSummaryVC+Network.swift */,
 			);
 			name = AccountSummary;
 			sourceTree = "<group>";
@@ -186,6 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				E3F4FDFB298BE59B00E201A2 /* AccountSummaryCell.swift */,
+				E3F4FE3E2990633400E201A2 /* SkeletonLoadable.swift */,
+				E3F4FE402990636B00E201A2 /* SkeletonCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -194,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				E3F4FE2B298C063000E201A2 /* CurrencyFormatterTest.swift */,
+				E3F4FE3C2990609700E201A2 /* AccountTests.swift */,
 			);
 			path = BankeyUnitTests;
 			sourceTree = "<group>";
@@ -204,6 +219,14 @@
 				E3F4FE32298CA4CD00E201A2 /* ShakeyBellView.swift */,
 			);
 			name = Components;
+			sourceTree = "<group>";
+		};
+		E3F4FE42299067C200E201A2 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E3F4FE43299067CF00E201A2 /* ProfileManager.swift */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +336,7 @@
 				E3F4FDFE298BFDB300E201A2 /* DecimalUtil.swift in Sources */,
 				E3F4FDF6298B596E00E201A2 /* AccountSummaryHeaderView.swift in Sources */,
 				E3F4FDE9298AD38800E201A2 /* ViewControllerPreview.swift in Sources */,
+				E3F4FE44299067CF00E201A2 /* ProfileManager.swift in Sources */,
 				E3F4FDF1298B520D00E201A2 /* MainViewController.swift in Sources */,
 				E3F4FDED298B263800E201A2 /* LocalState.swift in Sources */,
 				E3F4FDEF298B50FC00E201A2 /* UIVIewController+Ext.swift in Sources */,
@@ -321,10 +345,13 @@
 				E3F4FDC62988540F00E201A2 /* LoginViewController.swift in Sources */,
 				E3F4FE30298C2A2B00E201A2 /* UITextField+SecureToggle.swift in Sources */,
 				E3F4FDC22988540F00E201A2 /* AppDelegate.swift in Sources */,
+				E3F4FE3F2990633400E201A2 /* SkeletonLoadable.swift in Sources */,
 				E3F4FE2E298C281F00E201A2 /* NSNotificationName.swift in Sources */,
+				E3F4FE412990636B00E201A2 /* SkeletonCell.swift in Sources */,
 				E3F4FDD82988563E00E201A2 /* LoginView.swift in Sources */,
 				E3F4FDE6298AA1C300E201A2 /* OnboardingViewController.swift in Sources */,
 				E3F4FDC42988540F00E201A2 /* SceneDelegate.swift in Sources */,
+				E3F4FE3B29905C7F00E201A2 /* AccountSummaryVC+Network.swift in Sources */,
 				E3F4FE35298CABB000E201A2 /* Date+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3F4FE2C298C063000E201A2 /* CurrencyFormatterTest.swift in Sources */,
+				E3F4FE3D2990609800E201A2 /* AccountTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

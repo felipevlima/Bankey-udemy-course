@@ -7,13 +7,14 @@
 
 import UIKit
 
+enum AccountType: String, Codable {
+    case Banking
+    case CreditCard
+    case Investment
+}
+
 class AccountSummaryCell: UITableViewCell {
-    enum AccountType: String {
-        case Banking
-        case CreditCard
-        case Investiment
-    }
-    
+
     struct ViewModel {
         let accountType: AccountType
         let accountName: String
@@ -160,7 +161,7 @@ extension AccountSummaryCell {
         case .CreditCard:
             underlineView.backgroundColor = .systemOrange
             balanceLabel.text = "Balance"
-        case .Investiment:
+        case .Investment:
             underlineView.backgroundColor = .systemPurple
             balanceLabel.text = "Value"
         }
